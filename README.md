@@ -32,6 +32,23 @@ Set parameters in `main.m` and run:
 [Sf, put] = ADI_Dong_holder_final(S0, L0, tau, K, k_TC, deltat, beta, rho1, rho2, rho3, sigmaS, sigmaL, alpha, theta, r, N_S, N_L, N_T, const)
 ```
 
+
+## Parameter Estimation
+
+The repository includes Maximum Likelihood Estimation (MLE) programs for empirical analysis:
+
+- `MLE_estimation.m` - Main parameter estimation script
+- `LogLikelihood.m` - Log-likelihood function implementation
+- `ParameterOptimization.m` - Optimization routine for parameter fitting
+
+These programs are designed to estimate model parameters from market data, including:
+- Asset price volatility (σS)
+- Liquidity volatility (σL)
+- Correlation coefficients (ρ1, ρ2, ρ3)
+- Other structural parameters
+
+The estimation utilizes historical price and liquidity data to calibrate the model for practical applications.
+
 ## Reference
 
 Based on the paper: "Pricing American options with exogenous and endogenous transaction costs"
