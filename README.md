@@ -34,13 +34,6 @@ Set parameters in `main.m` and run:
 
 
 ## Parameter Estimation
-
-The repository includes Maximum Likelihood Estimation (MLE) programs for empirical analysis:
-
-- `MLE_estimation.m` - Main parameter estimation script
-- `LogLikelihood.m` - Log-likelihood function implementation
-- `ParameterOptimization.m` - Optimization routine for parameter fitting
-
 These programs are designed to estimate model parameters from market data, including:
 - Asset price volatility (σS)
 - Liquidity volatility (σL)
