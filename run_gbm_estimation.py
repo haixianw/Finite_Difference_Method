@@ -13,7 +13,7 @@ def main():
     print("Estimating both drift (μ) and volatility (σ) parameters")
     
     # Set risk-free rate as initial guess for mu (optional)
-    risk_free_rate = 0.02  # 2% annualized risk-free rate as initial guess
+    risk_free_rate = -0.002  # 2% annualized risk-free rate as initial guess
     print(f"Using risk-free rate r = {risk_free_rate:.2%} as initial guess for drift parameter μ")
     
     # Set output directory
@@ -26,11 +26,11 @@ def main():
     output_file = os.path.join(output_dir, f"soybean_meal_futures_gbm_results_{timestamp}.pdf")
     
     # Set initial parameter values
-    initial_params = [risk_free_rate, 0.15]  # [mu, sigma]
+    initial_params = [risk_free_rate, 0.1]  # [mu, sigma]
     
     # Run parameter estimation
     estimated_params, log_likelihood, param_stats = run_gbm_estimation(
-        csv_file_path="soybean_meal_future_window5.csv",  # Use same CSV file as original code
+        csv_file_path="25_soybean_meal_future_window1.csv",  # Use same CSV file as original code
         price_column="收盘价",  # Closing price column
         date_column="交易时间",  # Trading date column
         risk_free_rate=risk_free_rate,  # Used as initial guess only

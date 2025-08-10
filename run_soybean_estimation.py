@@ -27,18 +27,16 @@ if __name__ == "__main__":
     # Initial parameters [mu, alpha, beta, theta_bar, sigma_S, sigma_L, rho1, rho2, rho3, lambda_, phi]
     # Run parameter estimation
     estimated_params, L_estimated, param_stats = run_parameter_estimation(
-        csv_file_path="soybean_meal_future_window5.csv",
+        csv_file_path="25_soybean_meal_future_window1.csv",
         price_column="收盘价",
         date_column="交易时间",
-        initial_params=[0.02, 2, 0.5, 0.22, 0.15, 0.1, 0.2, 0.5, 0.3, 5.0, 0.5],
+        initial_params=[-0.002, 2, 0.7, 0.17, 0.1, 0.1, 0.2, 0.5, 0.3, 5.0, 0.5],
         save_results=True,
         output_file=output_file
     )
-    #新的参数：专门用于window1的参数 [0.02, 2, 0.5, 0.2, 0.15, 0.1, 0.2, 0.5, 0.3, 5.0, 0.5]
-    #新的参数：专门用于window2的参数 [0.02, 2, 0.4, 0.2, 0.12, 0.1, 0.2, 0.5, 0.3, 5.0, 0.5]
-    #新的参数：专门用于window3的参数 [0.02, 2, 0.305, 0.12, 0.144, 0.03, 0.2, 0.5, 0.3, 5.0, 0.5]
-    #新的参数：专门用于window4的参数 [0.02, 2, 0.455, 0.12, 0.185, 0.05, 0.2, 0.5, 0.3, 5.0, 0.5]
-    #新的参数：专门用于window5的参数 [0.02, 2, 0.5, 0.22, 0.15, 0.1, 0.2, 0.5, 0.3, 5.0, 0.5]
+    #initial_parameters [-0.002, 2, 0.7, 0.17, 0.1, 0.1, 0.2, 0.5, 0.3, 5.0, 0.5]
+
+
    
     print("\n=== Parameter Estimation Complete ===")
     print(f"Results saved to: {output_file}")
